@@ -1,28 +1,33 @@
-
-import React, { useState } from 'react';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { TiSocialPinterest } from 'react-icons/ti';
-import { FaRegCopyright } from 'react-icons/fa'
-import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { TiSocialPinterest } from "react-icons/ti";
+import { FaRegCopyright } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 const Footer = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   function submithandler(event) {
     event.preventDefault();
-    setValue('');
+    setValue("");
     toast.success("Subscribe Successfully", {
       autoClose: 1000,
-      position: 'top-center'
-    })
+      position: "top-center",
+    });
   }
   return (
-    <div className='w-full mt-24 bg-gray-900 text-gray-300 py-2 px-2'>
-      <div className='conatiner mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8 px-4'>
-        <div className='col-span-2 py-8 md:pt-2'>
-          <h1 className='font-bold text-white uppercase'>More about A-Mart</h1>
-          <p className=' mr-10 mt-5'>Lorem ipsum dolor sit amet consectetur
-            elit. Enim sint ab ullam, numquam nesciunt in.</p>
-          <div className='flex gap-3 sm:w-[300px] pt-4 text-2xl'>
+    <div className="w-full mt-24 bg-gray-900 text-gray-300 py-2 px-2">
+      <div className="conatiner mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8 px-4">
+        <div className="col-span-2 py-8 md:pt-2">
+          <h1 className="font-bold text-white uppercase">
+            More about Fashion Frenzy
+          </h1>
+          <p className=" mr-10 mt-1.5">
+            Fashion Frenzy is a vibrant and dynamic clothing ecommerce website
+            offering the latest trends and stylish outfits for fashion-forward
+            individuals. Our platform combines quality, variety, and
+            affordability to create an unparalleled shopping experience.
+          </p>
+          <div className="flex gap-3 sm:w-[300px] pt-4 text-2xl">
             <FaFacebook />
             <FaInstagram />
             <FaTwitter />
@@ -31,57 +36,60 @@ const Footer = () => {
         </div>
 
         <div>
-          <h6 className='font-bold uppercare pt-2'>CATEGORIES</h6>
+          <h6 className="font-bold uppercare pt-2">CATEGORIES</h6>
           <ul>
-            <Link to={'/'}>
-              <li className='py-1'>Home</li>
+            <Link to={"/"}>
+              <li className="py-1">Home</li>
             </Link>
-            <Link to={'/order'}>
-              <li className='py-1'>Orders</li>
+            <Link to={"/order"}>
+              <li className="py-1">Orders</li>
             </Link>
 
-            <Link to='/allproducts'>
-              <li className='py-1'>AllProducts</li>
+            <Link to="/allproducts">
+              <li className="py-1">AllProducts</li>
             </Link>
-            <Link to={'/cart'}>
-              <li className='py-1'>Cart</li>
+            <Link to={"/cart"}>
+              <li className="py-1">Cart</li>
             </Link>
           </ul>
         </div>
         <div>
-          <h6 className='font-bold uppercare pt-2'>COMPANY</h6>
+          <h6 className="font-bold uppercare pt-2">COMPANY</h6>
           <ul>
-            <li className='py-1'>About</li>
-            <li className='py-1'>Blog</li>
-            <li className='py-1'>Jobs</li>
-            <li className='py-1'>Partners</li>
+            <li className="py-1">About</li>
+            <li className="py-1">Blog</li>
+            <li className="py-1">Jobs</li>
+            <li className="py-1">Partners</li>
           </ul>
         </div>
-        <div className='col-span-2 py-8 md:pt-2'>
-          <p className='font-bold uppercase'>Subscribe to our newsletters</p>
-          <p className='py-4'>
-            Get email updates on all our special offers
-          </p>
-          <form className='flex flex-col sm:flex-row' onSubmit={submithandler}>
-            <input className='w-full p-2 mr-4 rounded-md mb-4 text-black outline' type='email' placeholder='Enter email..'
+        <div className="col-span-2 py-8 md:pt-2">
+          <p className="font-bold uppercase">Subscribe to our newsletters</p>
+          <p className="pt-1.5 pb-4">Get email updates on all our special offers</p>
+          <form className="flex flex-col sm:flex-row" onSubmit={submithandler}>
+            <input
+              className="w-full p-2 mr-4 rounded-md mb-4 text-black outline"
+              type="email"
+              placeholder="Enter email.."
               value={value}
               onChange={(e) => setValue(e.target.value)}
               required
             />
-            <button class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium 
-            rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Subscribe</button>
+            <button
+              class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium 
+            rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            >
+              Subscribe
+            </button>
           </form>
         </div>
-
       </div>
 
-      <div className='flex  px-2 py-4 mx-auto justify-center sm:flex-row text-center text-gray-500'>
-        <div className='py-4 flex items-center gap-1'>
+      <div className="flex  px-2 py-4 mx-auto justify-center sm:flex-row text-center text-gray-500">
+        <div className="py-4 flex items-center gap-1">
           <FaRegCopyright />
           <span>Copyright 2023 |</span>
           <span>All Rights Reserved |</span>
           <span>Powered by ar.com</span>
-
         </div>
       </div>
     </div>

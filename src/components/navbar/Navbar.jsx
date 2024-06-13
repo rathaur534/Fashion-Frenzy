@@ -44,7 +44,7 @@ function Navbar() {
               <div className="ml-4 flex lg:ml-0">
                 <Link to={'/'} className='flex'>
                   <div className="flex ">
-                    <h1 className='text-white text-2xl font-bold text-black  px-2 py-1 rounded'>A-Mart</h1>
+                    <h1 className='text-white text-2xl font-bold text-black  px-2 py-1 rounded'>Fashion Frenzy</h1>
                   </div>
                 </Link>
               </div>
